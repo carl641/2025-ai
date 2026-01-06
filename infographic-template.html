@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Major AI Events in 2025 — Infographic + Sources</title>
+  <style>
+    :root {
+      --bg-dark: #0a0e17;
+      --bg-mid: #0d1221;
+      --card-bg: rgba(16, 24, 40, 0.85);
+      --card-border: rgba(100, 160, 255, 0.25);
+      --card-glow: rgba(80, 140, 255, 0.15);
+      --text: #e8eef7;
+      --text-bright: #ffffff;
+      --muted: #8899b3;
+      --accent-blue: #4da6ff;
+      --accent-gold: #f5a623;
+      --accent-orange: #ff8c42;
+      --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      --gradient-gold: linear-gradient(135deg, #f5a623 0%, #ff6b35 100%);
+      --link: #7cc4ff;
+      --glow-blue: 0 0 20px rgba(77, 166, 255, 0.4);
+      --glow-gold: 0 0 20px rgba(245, 166, 35, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Circuit board background pattern */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        /* Vertical lines */
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 80px,
+          rgba(77, 166, 255, 0.03) 80px,
+          rgba(77, 166, 255, 0.03) 81px
+        ),
+        /* Horizontal lines */
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 80px,
+          rgba(77, 166, 255, 0.03) 80px,
+          rgba(77, 166, 255, 0.03) 81px
+        ),
+        /* Gradient overlay */
+        radial-gradient(ellipse at 50% 0%, rgba(77, 166, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 100%, rgba(245, 166, 35, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Animated circuit dots */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(77, 166, 255, 0.15) 2px, transparent 2px),
+        radial-gradient(circle at 90% 80%, rgba(245, 166, 35, 0.15) 2px, transparent 2px),
+        radial-gradient(circle at 50% 50%, rgba(77, 166, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 20% 70%, rgba(77, 166, 255, 0.12) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 80% 30%, rgba(245, 166, 35, 0.12) 1.5px, transparent 1.5px);
+      background-size: 160px 160px, 200px 200px, 80px 80px, 120px 120px, 140px 140px;
+      pointer-events: none;
+      z-index: 0;
+      animation: pulse 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header styling */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 0;
+    }
+
+    .title-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(77, 166, 255, 0.1);
+      border: 1px solid rgba(77, 166, 255, 0.3);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: var(--accent-blue);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .title-badge::before {
+      content: '📅';
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      margin: 0 0 12px 0;
+      letter-spacing: -0.5px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    h1 .text-white {
+      color: var(--text-bright);
+    }
+
+    h1 .text-gradient {
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h1 .year {
+      background: var(--gradient-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 8px;
+    }
+
+    .divider {
+      width: 120px;
+      height: 3px;
+      background: var(--gradient-gold);
+      margin: 20px auto;
+      border-radius: 2px;
+      box-shadow: var(--glow-gold);
+    }
+
+    /* Card styling with glow border */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(77, 166, 255, 0.5), transparent);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-icon.blue {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));
+      border: 1px solid rgba(77, 166, 255, 0.3);
+      box-shadow: var(--glow-blue);
+    }
+
+    .card-icon.gold {
+      background: linear-gradient(135deg, rgba(245, 166, 35, 0.2), rgba(255, 107, 53, 0.2));
+      border: 1px solid rgba(245, 166, 35, 0.3);
+      box-shadow: var(--glow-gold);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-bright);
+      letter-spacing: 0.3px;
+    }
+
+    /* Infographic image styling */
+    .infographic-container {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(77, 166, 255, 0.2);
+    }
+
+    .infographic-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 2px;
+      background: linear-gradient(135deg, rgba(77, 166, 255, 0.3), rgba(245, 166, 35, 0.3));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Table styling */
+    .table-container {
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead {
+      background: rgba(77, 166, 255, 0.1);
+    }
+
+    th {
+      padding: 14px 16px;
+      color: var(--accent-blue);
+      text-align: left;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(77, 166, 255, 0.2);
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background: rgba(77, 166, 255, 0.05);
+    }
+
+    td.date {
+      white-space: nowrap;
+      color: var(--accent-gold);
+      font-weight: 600;
+      font-family: 'SF Mono', 'Consolas', monospace;
+      width: 130px;
+    }
+
+    td.event {
+      color: var(--text);
+    }
+
+    td.links a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 4px 10px;
+      background: rgba(77, 166, 255, 0.1);
+      border: 1px solid rgba(77, 166, 255, 0.2);
+      border-radius: 6px;
+      font-size: 12px;
+      transition: all 0.2s ease;
+    }
+
+    td.links a:hover {
+      background: rgba(77, 166, 255, 0.2);
+      border-color: rgba(77, 166, 255, 0.4);
+      text-decoration: none;
+      box-shadow: var(--glow-blue);
+    }
+
+    /* Source list */
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-left: 24px;
+      position: relative;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: var(--gradient-blue);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(77, 166, 255, 0.5);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-blue);
+      text-decoration: underline;
+    }
+
+    /* Footer styling */
+    .footer {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-main {
+      text-align: center;
+      margin-top: 50px;
+      padding: 24px;
+      background: rgba(16, 24, 40, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-main p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-tagline {
+      font-size: 18px !important;
+      font-weight: 600;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Timeline decoration */
+    .timeline-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10px;
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .timeline-bar::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(77, 166, 255, 0.5) 10%,
+        rgba(245, 166, 35, 0.5) 50%,
+        rgba(77, 166, 255, 0.5) 90%,
+        transparent
+      );
+      transform: translateY(-50%);
+    }
+
+    .timeline-node {
+      width: 60px;
+      height: 32px;
+      background: var(--bg-mid);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-node.active {
+      background: linear-gradient(135deg, rgba(245, 166, 35, 0.3), rgba(255, 107, 53, 0.3));
+      border-color: rgba(245, 166, 35, 0.5);
+      box-shadow: var(--glow-gold);
+      color: var(--accent-gold);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 24px 16px 60px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      th, td {
+        padding: 10px 12px;
+      }
+
+      .timeline-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+      }
+
+      .timeline-node {
+        width: 50px;
+        height: 28px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title-badge">Key Dates & Breakthroughs</div>
+      <h1>
+        <span class="text-white">Major</span>
+        <span class="text-gradient">AI</span>
+        <span class="text-white">Events in</span>
+        <span class="year">2025</span>
+      </h1>
+      <p class="subtitle">A comprehensive timeline of the most significant artificial intelligence milestones, announcements, and breakthroughs.</p>
+      <div class="divider"></div>
+    </header>
+
+    <!-- Timeline decoration -->
+    <div class="timeline-bar">
+      <div class="timeline-node">Jan</div>
+      <div class="timeline-node">Mar</div>
+      <div class="timeline-node active">May</div>
+      <div class="timeline-node active">Aug</div>
+      <div class="timeline-node active">Sep</div>
+      <div class="timeline-node">Oct</div>
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon blue">📊</div>
+        <h2>Infographic</h2>
+      </div>
+      <div class="infographic-container">
+        <img alt="Major AI Events in 2025 infographic" src="data:image/png;base64,{b64}" />
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon gold">📅</div>
+        <h2>Timeline (with links)</h2>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Event</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows_html}
+          </tbody>
+        </table>
+      </div>
+      <p class="footer">Note: Some items link to a primary announcement; others link to high-quality reporting when that's the most direct public record.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon blue">🔗</div>
+        <h2>Source List</h2>
+      </div>
+      <ul>
+        {sources_html}
+      </ul>
+    </section>
+
+    <footer class="footer-main">
+      <p class="footer-tagline">The Year That Changed the AI Landscape</p>
+      <p>Generated on {today}</p>
+    </footer>
+  </div>
+</body>
+</html>
